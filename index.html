@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BLIND Streetwear en Trujui, Buenos Aires. Catálogo urbano, prendas destacadas y contacto directo por WhatsApp."
+    />
+    <title>BLIND | Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/Logo Blanco.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="hero" id="inicio">
+      <nav class="nav glass" id="nav">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <img
+            class="brand-wordmark"
+            src="assets/Blind Blanco.png"
+            alt="BLIND"
+            loading="eager"
+            onerror="this.style.display='none'"
+          />
+          <span class="brand-fallback">BLIND</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+        <ul class="menu" id="menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content reveal" data-reveal>
+        <p class="tag">Streetwear · Trujui · Buenos Aires</p>
+        <h1>ESTILO URBANO QUE IMPACTA</h1>
+        <p>
+          BLIND es una tienda de streetwear con identidad callejera real. Diseños fuertes,
+          combinaciones modernas y actitud para destacar.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5491121925729" target="_blank" rel="noreferrer">
+            Comprar por WhatsApp
+          </a>
+          <a class="btn btn-outline" href="https://www.instagram.com/ind.blind" target="_blank" rel="noreferrer">
+            Ver Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal" id="sobre" data-reveal>
+        <h2>Sobre BLIND</h2>
+        <p>
+          Moda urbana para quienes quieren vestir distinto. En BLIND vas a encontrar prendas con
+          personalidad y esencia streetwear.
+        </p>
+      </section>
+
+      <section class="section reveal" id="catalogo" data-reveal>
+        <div class="section-head">
+          <h2>Catálogo destacado</h2>
+          <button class="btn btn-outline" id="shuffleBtn" type="button">Orden aleatorio</button>
+        </div>
+        <p class="hint">Tocá una tarjeta para ampliarla y ver su nombre.</p>
+
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-name="Baggy con regulador">
+            <img src="assets/baggy-con-regulador.png" alt="Baggy con regulador" loading="lazy" />
+            <div class="product-info"><h3>Baggy con regulador</h3></div>
+          </article>
+
+          <article class="product-card" data-name="Campera EME">
+            <img src="assets/campera-eme.png" alt="Campera EME" loading="lazy" />
+            <div class="product-info"><h3>Campera EME</h3></div>
+          </article>
+
+          <article class="product-card" data-name="Jean azul lavado">
+            <img src="assets/azul-lavado.png" alt="Jean azul lavado" loading="lazy" />
+            <div class="product-info"><h3>Azul lavado</h3></div>
+          </article>
+
+          <article class="product-card" data-name="Remera BAD">
+            <img src="assets/bad.png" alt="Remera BAD" loading="lazy" />
+            <div class="product-info"><h3>BAD</h3></div>
+          </article>
+
+          <article class="product-card" data-name="Baggy chocolate">
+            <img src="assets/baggy-chocolate.png" alt="Baggy chocolate" loading="lazy" />
+            <div class="product-info"><h3>Baggy chocolate</h3></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="horarios" data-reveal>
+        <h2>Horarios</h2>
+        <div class="schedule">
+          <div><span>Lunes</span><span>10:00 a 13:00 / 16:00 a 20:00</span></div>
+          <div><span>Martes</span><span>10:00 a 13:00 / 16:00 a 20:00</span></div>
+          <div><span>Miércoles</span><span>10:00 a 13:00 / 16:00 a 20:00</span></div>
+          <div><span>Jueves</span><span>10:00 a 13:00 / 16:00 a 20:00</span></div>
+          <div><span>Viernes</span><span>10:00 a 20:00</span></div>
+          <div><span>Sábado</span><span>10:00 a 20:00</span></div>
+          <div><span>Domingo</span><span>Cerrado</span></div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="ubicacion" data-reveal>
+        <h2>Ubicación</h2>
+        <p>Av. Néstor Kirchner 3778, B1736, Trujui, Provincia de Buenos Aires.</p>
+        <a
+          class="btn btn-outline"
+          href="https://www.google.com/maps/place/Blind/@-34.5850495,-58.7491344,19z/data=!3m1!4b1!4m6!3m5!1s0x95bc971a486ab05d:0x653e906664e20033!8m2!3d-34.5850495!4d-58.7484907!16s%2Fg%2F11xtxf8l2_?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Cómo llegar
+        </a>
+      </section>
+
+      <section class="section reveal" id="contacto" data-reveal>
+        <h2>Contacto</h2>
+        <div class="contact-grid">
+          <article>
+            <h3>Teléfono</h3>
+            <a href="tel:+541121925729">011 2192-5729</a>
+          </article>
+          <article>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/5491121925729" target="_blank" rel="noreferrer">wa.me/5491121925729</a>
+          </article>
+          <article>
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/ind.blind" target="_blank" rel="noreferrer">@ind.blind</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> BLIND – Streetwear.</p>
+    </footer>
+
+    <div class="product-modal" id="productModal" aria-hidden="true">
+      <div class="product-modal__content glass">
+        <button id="closeModal" class="close-btn" type="button" aria-label="Cerrar">✕</button>
+        <img id="modalImage" src="" alt="Producto seleccionado" />
+        <h3 id="modalTitle"></h3>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
