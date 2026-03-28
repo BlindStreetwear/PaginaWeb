@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BLIND Streetwear en Trujui, Buenos Aires. Moda urbana con estilo propio, prendas modernas y esencia callejera."
+    />
+    <title>BLIND | Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="inicio">
+      <nav class="nav">
+        <a class="logo" href="#inicio">BLIND</a>
+        <ul class="menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <p class="tag">Streetwear • Trujui • Buenos Aires</p>
+        <h1>ESTILO URBANO<br />SIN FILTRO</h1>
+        <p>
+          BLIND es una tienda de streetwear con identidad urbana, pensada para quienes buscan
+          destacar con estilo propio. Prendas modernas, diseño fuerte y esencia callejera.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5491121925729" target="_blank" rel="noreferrer">
+            Hablar por WhatsApp
+          </a>
+          <a class="btn btn-outline" href="https://www.instagram.com/ind.blind" target="_blank" rel="noreferrer">
+            Ver Instagram
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="sobre">
+        <h2>Sobre BLIND</h2>
+        <p>
+          En BLIND trabajamos una estética streetwear auténtica para que cada outfit hable por
+          vos. Encontrá prendas con personalidad, combinaciones urbanas y la actitud que define la
+          calle.
+        </p>
+      </section>
+
+      <section class="section" id="horarios">
+        <h2>Horarios</h2>
+        <div class="schedule">
+          <div><span>Lunes</span><span>10:00 a 13:00 / 16:00 a 20:00</span></div>
+          <div><span>Martes</span><span>10:00 a 13:00 / 16:00 a 20:00</span></div>
+          <div><span>Miércoles</span><span>10:00 a 13:00 / 16:00 a 20:00</span></div>
+          <div><span>Jueves</span><span>10:00 a 13:00 / 16:00 a 20:00</span></div>
+          <div><span>Viernes</span><span>10:00 a 20:00</span></div>
+          <div><span>Sábado</span><span>10:00 a 20:00</span></div>
+          <div><span>Domingo</span><span>Cerrado</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Av. Néstor Kirchner 3778, B1736, Trujui, Provincia de Buenos Aires.</p>
+        <a
+          class="btn btn-outline"
+          href="https://www.google.com/maps/search/?api=1&query=Av.+N%C3%A9stor+Kirchner+3778%2C+Trujui%2C+Buenos+Aires"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Cómo llegar
+        </a>
+      </section>
+
+      <section class="section" id="contacto">
+        <h2>Contacto</h2>
+        <div class="contact-grid">
+          <article>
+            <h3>Teléfono</h3>
+            <a href="tel:+541121925729">011 2192-5729</a>
+          </article>
+          <article>
+            <h3>WhatsApp directo</h3>
+            <a href="https://wa.me/5491121925729" target="_blank" rel="noreferrer"
+              >wa.me/5491121925729</a
+            >
+          </article>
+          <article>
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/ind.blind" target="_blank" rel="noreferrer"
+              >@ind.blind</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> BLIND – Streetwear.</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
