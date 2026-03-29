@@ -68,7 +68,8 @@ body {
 .nav {
   border-radius: 0;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
   align-items: center;
   background: transparent;
   border: none;
@@ -130,7 +131,7 @@ body {
   align-items: center;
   gap: 1.3rem;
   grid-column: 1;
-  justify-self: start;
+  justify-self: center;
   align-self: center;
 }
 
@@ -164,7 +165,7 @@ body {
   border-radius: 999px;
   padding: 0.32rem 0.62rem;
   grid-column: 1;
-  justify-self: start;
+  justify-self: center;
 }
 
 .social-links {
@@ -172,7 +173,7 @@ body {
   align-items: center;
   gap: 0.55rem;
   grid-column: 3;
-  justify-self: end;
+  justify-self: center;
   align-self: center;
 }
 
@@ -477,20 +478,23 @@ main {
 
 @media (max-width: 860px) {
   .nav {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
     min-height: 74px;
+    gap: 0.6rem;
   }
 
   .menu-toggle {
     display: block;
-    grid-column: 1;
-    justify-self: start;
+    grid-column: auto;
+    justify-self: center;
   }
 
   .menu {
     position: absolute;
     top: calc(100% + 8px);
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     flex-direction: column;
     width: min(220px, 80vw);
     background: rgba(18, 18, 18, 0.92);
