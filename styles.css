@@ -82,6 +82,10 @@ body {
   z-index: 20;
 }
 
+.nav > * {
+  align-self: center;
+}
+
 .brand {
   text-decoration: none;
   display: flex;
@@ -128,6 +132,11 @@ body {
   grid-column: 1;
   justify-self: start;
   align-self: center;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
 }
 
 .menu a {
