@@ -1,5 +1,5 @@
 :root {
-  --bg: #e6e6e6;
+  --bg: #ffffff;
   --panel: #ffffff;
   --text: #0b0b0b;
   --muted: #2f2f2f;
@@ -27,13 +27,7 @@ body {
 }
 
 .bg-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(circle at center, black 20%, transparent 85%);
+  display: none;
 }
 
 .glass {
@@ -44,7 +38,7 @@ body {
 
 .hero {
   min-height: 100vh;
-  padding: 1rem clamp(1rem, 2.5vw, 3rem) 3rem;
+  padding: 0 clamp(1rem, 3vw, 3.2rem) 3.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,35 +54,49 @@ body {
 .hero-backdrop {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(230, 230, 230, 0.62)),
+  background-image: linear-gradient(rgba(12, 12, 12, 0.46), rgba(12, 12, 12, 0.4)),
     url('assets/Local.jpeg');
   background-size: cover;
-  background-position: center;
-  filter: blur(5px) saturate(0.95);
-  transform: scale(1.04);
-  opacity: 0.9;
+  background-position: center top;
+  filter: grayscale(0.25);
+  transform: scale(1.02);
+  opacity: 0.98;
   z-index: 0;
   pointer-events: none;
 }
 
 .nav {
-  border-radius: 14px;
-  display: flex;
+  border-radius: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.52);
+  backdrop-filter: none;
   gap: 1rem;
-  padding: 0.6rem 0.9rem;
+  min-height: 88px;
+  padding: 0 0.2rem;
   position: sticky;
-  top: 0.8rem;
+  top: 0;
   z-index: 20;
+}
+
+.nav > * {
+  align-self: center;
 }
 
 .brand {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  color: var(--text);
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  margin-left: 0;
+  align-self: center;
 }
 
 .brand-logo {
@@ -101,10 +109,11 @@ body {
 }
 
 .brand-wordmark {
-  width: min(260px, 45vw);
+  width: min(225px, 24vw);
   height: auto;
   object-fit: contain;
-  filter: invert(1);
+  filter: none;
+  transform: translateY(7px);
 }
 
 .brand-fallback {
@@ -119,52 +128,107 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1.1rem;
+  align-items: center;
+  gap: 1.3rem;
+  align-self: center;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
 }
 
 .menu a {
-  color: var(--muted);
+  color: #fff;
   text-decoration: none;
-  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  opacity: 0.94;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
 }
 
 .menu a:hover {
-  color: #000;
+  opacity: 1;
 }
 
 .menu-toggle {
   display: none;
-  border: 1px solid #6f6f6f;
-  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #fff;
   background: transparent;
-  border-radius: 8px;
-  padding: 0.3rem 0.55rem;
+  border-radius: 999px;
+  padding: 0.32rem 0.62rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  align-self: center;
+}
+
+.social-links a {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-links a:hover {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+
+.social-links svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
 }
 
 .hero-content {
   max-width: 760px;
-  margin-top: 3rem;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  transform: translateY(-3vh);
 }
 
 .tag {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.88);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  font-size: 0.69rem;
+  margin-bottom: 1.2rem;
 }
 
 h1 {
-  font-family: 'Anton', Impact, sans-serif;
-  font-size: clamp(2.4rem, 8vw, 6.1rem);
-  line-height: 0.95;
-  margin: 0.5rem 0 1rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: clamp(2.4rem, 7.4vw, 5.4rem);
+  line-height: 0.96;
+  margin: 0;
+  letter-spacing: 0.03em;
+  font-weight: 800;
 }
 
 .hero-actions {
-  margin-top: 1.5rem;
+  margin-top: 1.9rem;
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {
@@ -182,20 +246,20 @@ h1 {
 }
 
 .btn-primary {
-  background: var(--primary);
-  color: #fff;
+  background: #fff;
+  color: #0f0f0f;
 }
 
 .btn-outline {
-  color: var(--text);
-  border: 1px solid #5f5f5f;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.72);
   background: transparent;
 }
 
 .btn-outline:hover {
-  background: #111;
-  color: #fff;
-  border-color: var(--accent);
+  background: #fff;
+  color: #111;
+  border-color: #fff;
 }
 
 .hero-scroll {
@@ -207,7 +271,7 @@ h1 {
 .hero-scroll span {
   width: 2px;
   height: 48px;
-  background: linear-gradient(to bottom, #2f2f2f, transparent);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.92), transparent);
   animation: pulse 1.4s infinite;
 }
 
@@ -224,7 +288,7 @@ h1 {
 }
 
 main {
-  padding: 0 clamp(1rem, 2.5vw, 3rem) 2.5rem;
+  padding: 1rem clamp(1rem, 2.5vw, 3rem) 2.5rem;
 }
 
 .section {
@@ -233,6 +297,20 @@ main {
   background: linear-gradient(160deg, rgba(255, 255, 255, 1), rgba(230, 230, 230, 1));
   padding: clamp(1rem, 2vw, 1.7rem);
   margin-bottom: 1rem;
+}
+
+.section.reveal.visible {
+  background: #e3e3e3;
+  border-color: transparent;
+  color: var(--text);
+}
+
+.section.reveal.visible p,
+.section.reveal.visible h2,
+.section.reveal.visible h3,
+.section.reveal.visible a,
+.section.reveal.visible .hint {
+  color: var(--text);
 }
 
 .section h2 {
@@ -393,18 +471,25 @@ main {
 }
 
 @media (max-width: 860px) {
+  .nav {
+    grid-auto-flow: row;
+    min-height: 74px;
+  }
+
   .menu-toggle {
     display: block;
+    order: -1;
   }
 
   .menu {
     position: absolute;
     top: calc(100% + 8px);
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     flex-direction: column;
     width: min(220px, 80vw);
-    background: #fafafa;
-    border: 1px solid #8e8e8e;
+    background: rgba(18, 18, 18, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 10px;
     padding: 0.6rem;
     display: none;
@@ -415,7 +500,12 @@ main {
   }
 
   .brand-wordmark {
-    width: 145px;
+    width: 160px;
+  }
+
+  .social-links a {
+    width: 26px;
+    height: 26px;
   }
 }
 
