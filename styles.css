@@ -92,6 +92,7 @@ body {
   margin-left: 0;
   grid-column: 2;
   justify-self: center;
+  align-self: center;
 }
 
 .brand-logo {
@@ -104,7 +105,7 @@ body {
 }
 
 .brand-wordmark {
-  width: min(290px, 32vw);
+  width: min(225px, 24vw);
   height: auto;
   object-fit: contain;
   filter: none;
@@ -122,9 +123,11 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 1.3rem;
   grid-column: 1;
   justify-self: start;
+  align-self: center;
 }
 
 .menu a {
@@ -135,6 +138,9 @@ body {
   font-size: 0.72rem;
   font-weight: 600;
   opacity: 0.94;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
 }
 
 .menu a:hover {
@@ -158,6 +164,7 @@ body {
   gap: 0.55rem;
   grid-column: 3;
   justify-self: end;
+  align-self: center;
 }
 
 .social-links a {
@@ -489,7 +496,7 @@ main {
   }
 
   .brand-wordmark {
-    width: 190px;
+    width: 160px;
   }
 
   .social-links a {
