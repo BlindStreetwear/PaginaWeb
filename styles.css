@@ -88,6 +88,14 @@ body {
   z-index: 20;
 }
 
+.nav-right {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .brand {
   text-decoration: none;
   display: flex;
@@ -129,8 +137,6 @@ body {
   padding: 0;
   display: flex;
   gap: 1.3rem;
-  grid-column: 3;
-  justify-self: end;
 }
 
 .menu a {
@@ -158,11 +164,45 @@ body {
   justify-self: start;
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.social-links a {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-links a:hover {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+
+.social-links svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
 .hero-content {
   max-width: 760px;
-  margin: auto auto 0;
+  margin: auto;
   text-align: center;
   color: #fff;
+  transform: translateY(-3vh);
 }
 
 .tag {
@@ -421,6 +461,13 @@ main {
     min-height: 74px;
   }
 
+  .nav-right {
+    grid-column: auto;
+    justify-self: auto;
+    position: relative;
+    gap: 0.7rem;
+  }
+
   .menu-toggle {
     display: block;
   }
@@ -436,8 +483,6 @@ main {
     border-radius: 10px;
     padding: 0.6rem;
     display: none;
-    grid-column: auto;
-    justify-self: auto;
   }
 
   .menu.open {
@@ -446,6 +491,11 @@ main {
 
   .brand-wordmark {
     width: 190px;
+  }
+
+  .social-links a {
+    width: 26px;
+    height: 26px;
   }
 }
 
