@@ -1,11 +1,11 @@
 :root {
-  --bg: #070707;
-  --panel: #111;
-  --text: #f5f5f5;
-  --muted: #b8b8b8;
-  --primary: #ffffff;
-  --accent: #5f87ff;
-  --border: #262626;
+  --bg: #e6e6e6;
+  --panel: #ffffff;
+  --text: #0b0b0b;
+  --muted: #2f2f2f;
+  --primary: #101010;
+  --accent: #000000;
+  --border: #8f8f8f;
 }
 
 * {
@@ -30,15 +30,15 @@ body {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(circle at center, black 20%, transparent 85%);
 }
 
 .glass {
-  background: rgba(12, 12, 12, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(12px);
 }
 
@@ -48,6 +48,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero > *:not(.hero-backdrop) {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(230, 230, 230, 0.62)),
+    url('assets/Local.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px) saturate(0.95);
+  transform: scale(1.04);
+  opacity: 0.9;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .nav {
@@ -108,12 +129,12 @@ body {
 }
 
 .menu a:hover {
-  color: var(--text);
+  color: #000;
 }
 
 .menu-toggle {
   display: none;
-  border: 1px solid #3a3a3a;
+  border: 1px solid #6f6f6f;
   color: var(--text);
   background: transparent;
   border-radius: 8px;
@@ -162,16 +183,18 @@ h1 {
 
 .btn-primary {
   background: var(--primary);
-  color: #000;
+  color: #fff;
 }
 
 .btn-outline {
   color: var(--text);
-  border: 1px solid #5a5a5a;
+  border: 1px solid #5f5f5f;
   background: transparent;
 }
 
 .btn-outline:hover {
+  background: #111;
+  color: #fff;
   border-color: var(--accent);
 }
 
@@ -184,7 +207,7 @@ h1 {
 .hero-scroll span {
   width: 2px;
   height: 48px;
-  background: linear-gradient(to bottom, #fff, transparent);
+  background: linear-gradient(to bottom, #2f2f2f, transparent);
   animation: pulse 1.4s infinite;
 }
 
@@ -207,7 +230,7 @@ main {
 .section {
   border: 1px solid var(--border);
   border-radius: 16px;
-  background: linear-gradient(160deg, rgba(16, 16, 16, 0.95), rgba(8, 8, 8, 0.95));
+  background: linear-gradient(160deg, rgba(255, 255, 255, 1), rgba(230, 230, 230, 1));
   padding: clamp(1rem, 2vw, 1.7rem);
   margin-bottom: 1rem;
 }
@@ -238,10 +261,10 @@ main {
 }
 
 .product-card {
-  border: 1px solid #2a2a2a;
+  border: 1px solid #9c9c9c;
   border-radius: 12px;
   overflow: hidden;
-  background: #0c0c0c;
+  background: #f8f8f8;
   transform: translateY(0);
   transition: transform 0.25s ease, border-color 0.2s ease;
   cursor: pointer;
@@ -249,7 +272,7 @@ main {
 
 .product-card:hover {
   transform: translateY(-4px);
-  border-color: #4969cc;
+  border-color: #2e2e2e;
 }
 
 .product-card img {
@@ -277,7 +300,7 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px dashed #2a2a2a;
+  border-bottom: 1px dashed #7e7e7e;
   padding: 0.42rem 0;
 }
 
@@ -293,8 +316,8 @@ main {
 
 .contact-grid article {
   border-radius: 12px;
-  border: 1px solid #2a2a2a;
-  background: #0f0f0f;
+  border: 1px solid #9c9c9c;
+  background: #f4f4f4;
   padding: 0.95rem;
 }
 
@@ -303,7 +326,8 @@ main {
 }
 
 .contact-grid a {
-  color: #b9caff;
+  color: #1b1b1b;
+  font-weight: 700;
 }
 
 .footer {
@@ -358,9 +382,9 @@ main {
 }
 
 .close-btn {
-  border: 1px solid #444;
+  border: 1px solid #5f5f5f;
   background: transparent;
-  color: #fff;
+  color: #222;
   border-radius: 8px;
   width: 32px;
   height: 32px;
@@ -379,8 +403,8 @@ main {
     right: 0;
     flex-direction: column;
     width: min(220px, 80vw);
-    background: #101010;
-    border: 1px solid #2e2e2e;
+    background: #fafafa;
+    border: 1px solid #8e8e8e;
     border-radius: 10px;
     padding: 0.6rem;
     display: none;
@@ -396,8 +420,7 @@ main {
 }
 
 @media (max-width: 680px) {
-  .brand-wordmark,
-  .brand-logo {
+  .brand-wordmark {
     display: none;
   }
 
