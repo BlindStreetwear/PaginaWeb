@@ -111,7 +111,7 @@ body {
   height: auto;
   object-fit: contain;
   filter: none;
-  transform: translateY(7px);
+  transform: translateY(-3px);
 }
 
 .brand-fallback {
