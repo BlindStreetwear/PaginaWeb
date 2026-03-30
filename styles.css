@@ -394,9 +394,10 @@ main {
 
 .contact-intro {
   margin: 0 0 0.75rem;
-  font-family: 'Anton', Impact, sans-serif;
-  letter-spacing: 0.04em;
-  font-size: 1.05rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 1rem;
 }
 
 .contact-grid article {
@@ -421,14 +422,20 @@ main {
   border-radius: 999px;
   background: #111;
   color: #fff;
-  font-size: 0.8rem;
+}
+
+.contact-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
 }
 
 .contact-grid h3 {
   margin: 0 0 0.35rem;
-  font-family: 'Anton', Impact, sans-serif;
-  letter-spacing: 0.03em;
-  font-size: 1.05rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.01em;
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 .contact-grid a {
@@ -445,6 +452,9 @@ main {
 }
 
 .contact-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   text-decoration: none;
   color: #111;
   border: 1px solid #555;
@@ -452,6 +462,12 @@ main {
   padding: 0.45rem 0.75rem;
   font-weight: 700;
   background: #fff;
+}
+
+.contact-social a svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
 }
 
 .contact-social a:hover {
