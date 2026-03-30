@@ -109,9 +109,12 @@
           <h2>Catálogo destacado</h2>
           <button class="btn btn-outline" id="shuffleBtn" type="button">Orden aleatorio</button>
         </div>
-        <p class="hint">Tocá una tarjeta para ampliarla y ver su nombre.</p>
+        <p class="hint">
+          Últimas 5 publicaciones de Instagram (si no hay token configurado, se muestra el catálogo
+          local).
+        </p>
 
-        <div class="product-grid" id="productGrid">
+        <div class="product-grid" id="productGrid" data-ig-token="">
           <article class="product-card" data-name="Baggy con regulador">
             <img src="assets/baggy-con-regulador.png" alt="Baggy con regulador" loading="lazy" />
             <div class="product-info"><h3>Baggy con regulador</h3></div>
