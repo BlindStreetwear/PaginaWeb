@@ -68,9 +68,7 @@ body {
 .nav {
   border-radius: 0;
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  justify-content: center;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   background: transparent;
   border: none;
@@ -130,6 +128,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.3rem;
+  justify-self: start;
   align-self: center;
 }
 
@@ -168,6 +167,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.55rem;
+  justify-self: end;
   align-self: center;
 }
 
@@ -472,7 +472,7 @@ main {
 
 @media (max-width: 860px) {
   .nav {
-    grid-auto-flow: row;
+    grid-template-columns: auto 1fr auto;
     min-height: 74px;
   }
 
